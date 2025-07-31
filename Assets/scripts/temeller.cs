@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class temeller : MonoBehaviour
@@ -6,6 +7,7 @@ public class temeller : MonoBehaviour
     public bool isDeath;
     [SerializeField] public int say1;
     [SerializeField] public int say2;
+    [SerializeField] public int girilensayi;
     private void Start()
     {
         //Giriþ
@@ -103,14 +105,48 @@ public class temeller : MonoBehaviour
         Debug.Log("Sonraki puan2: " + puan2);  */
 
         //iliþkisel operatörler
-        int sayi1 = 15;
+        /*int sayi1 = 15;
         int sayi2 = 25;
         Debug.Log(sayi1 > sayi2);
         Debug.Log(sayi1 < sayi2);
         Debug.Log(sayi1 >= sayi2);
         Debug.Log(sayi1 <= sayi2); 
         Debug.Log(sayi1 != sayi2); //eþit deðilse T
-        Debug.Log(sayi1 == sayi2); //F
+        Debug.Log(sayi1 == sayi2); //F */
+
+        /* //mantýksal operatörler ve && veya ||
+        string kullaniciadi = "ertev";
+        string sifre = "12345";
+        Debug.Log(kullaniciadi=="ertev" &&  sifre=="12345");
+
+        //tür dönüþümü (casting)
+        float ondalikSayi = 10 / 3f;
+        Debug.Log(ondalikSayi);
+        Debug.Log((int)ondalikSayi); */
+
+        //karar yapýlarý if-else
+        /* int yas = 10;
+        if(yas >= 10)
+        {
+            Debug.Log("yetiþkindir");
+
+        }
+        else
+        {
+            Debug.Log("küçüktür");
+        } */
+
+
+        if(girilensayi > 0)
+        {
+            Debug.Log("sayi pozitiftir");
+
+        }
+        else
+        {
+            Debug.Log("sayi negatif veya sýfýr");
+        }
+
 
     }
     private void Update()
