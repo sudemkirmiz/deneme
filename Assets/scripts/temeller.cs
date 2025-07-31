@@ -22,6 +22,11 @@ public class temeller : MonoBehaviour
     [SerializeField] public double urun2;
 
     [SerializeField] public int secim;
+
+    [SerializeField] public int baslangic;
+    [SerializeField] public int bitis;
+
+  
     private void Start()
     {
         //Giriþ
@@ -211,7 +216,7 @@ public class temeller : MonoBehaviour
 
         //switch-case
         //girilen iki sayýyý 4 iþlemi yaptýralým
-        switch (secim)
+        /* switch (secim)
         {
             case 1:
                 Debug.Log("pzt");
@@ -237,15 +242,32 @@ public class temeller : MonoBehaviour
             default:
                 Debug.Log("gün yok");
                 break;
+        }
+        //string sorularý
+        //bir string arasýnda bir boþluk olacak þekilde yazdýr hardcode
+        string kurum = "ERTEV";
+        string sonuc = "";
 
-
-
-
+        foreach (char item in kurum)
+        {
+            sonuc += item + " ";
         }
 
+        Debug.Log(sonuc); */
 
+        //for döngüsü
+        int deger = 0;
+        for(int i = baslangic ; i < bitis; i++)
+        {
+            int n = (bitis - baslangic);
+            deger = (n * (n + 1)) / 2;
 
-    }
+        }
+        Debug.Log(deger);
+        
+        
+
+}
     private void Update()
     {
         // Debug.Log("Puan : " + puan);// konsola mesaj verdiriyoruz.
