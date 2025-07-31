@@ -352,10 +352,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2051e1d65751cca42bcd425522c21419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puan: 0
-  isDeath: 0
-  say1: 0
-  say2: 0
+  "s\u0131navnot1": 0
+  "s\u0131navnot2": 0
+  perfnot: 0
+  aci1: 0
+  aci2: 0
+  aci3: 0
+  bagajhakki: 0
+  urun1: 0
+  urun2: 0
+  secim: 3
+  baslangic: 2
+  bitis: 5
+  sayi: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

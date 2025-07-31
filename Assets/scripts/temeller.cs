@@ -26,7 +26,9 @@ public class temeller : MonoBehaviour
     [SerializeField] public int baslangic;
     [SerializeField] public int bitis;
 
-  
+    [SerializeField] public int sayi;
+
+
     private void Start()
     {
         //Giriþ
@@ -256,18 +258,36 @@ public class temeller : MonoBehaviour
         Debug.Log(sonuc); */
 
         //for döngüsü
-        int deger = 0;
+       /* int toplam = 0;
         for(int i = baslangic ; i < bitis; i++)
         {
-            int n = (bitis - baslangic);
-            deger = (n * (n + 1)) / 2;
+            toplam += i;
 
         }
-        Debug.Log(deger);
-        
-        
+        Debug.Log(toplam); */
 
-}
+        int sayac = 0;
+        int toplam = 0;
+        for (int i = baslangic; i <= bitis; i++)
+        {
+            sayac++;
+            Debug.Log(i);
+            toplam += i;
+     
+        }
+        Debug.Log("aralýktaki sayýlarýn toplamý"+toplam);
+        Debug.Log("aralýktaki sayýlarýn ortalamasý" + toplam/sayac);
+
+        //girilen sayilarin faktoriyeli for döngüsü ile
+        int factorial = 1;
+        for(int i=1; i<=sayi; i++)
+        {
+            factorial *= i;
+        }
+        Debug.Log(sayi+" ! = "+factorial);
+
+
+    }
     private void Update()
     {
         // Debug.Log("Puan : " + puan);// konsola mesaj verdiriyoruz.
