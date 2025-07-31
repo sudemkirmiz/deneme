@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class temeller : MonoBehaviour
@@ -258,15 +260,15 @@ public class temeller : MonoBehaviour
         Debug.Log(sonuc); */
 
         //for döngüsü
-       /* int toplam = 0;
-        for(int i = baslangic ; i < bitis; i++)
-        {
-            toplam += i;
+        /* int toplam = 0;
+         for(int i = baslangic ; i < bitis; i++)
+         {
+             toplam += i;
 
-        }
-        Debug.Log(toplam); */
+         }
+         Debug.Log(toplam); */
 
-        int sayac = 0;
+        /*int sayac = 0;
         int toplam = 0;
         for (int i = baslangic; i <= bitis; i++)
         {
@@ -284,7 +286,84 @@ public class temeller : MonoBehaviour
         {
             factorial *= i;
         }
-        Debug.Log(sayi+" ! = "+factorial);
+        Debug.Log(sayi+"! = "+factorial); */
+        //while ile faktoriyel çözümleme
+        /* int factorial = 1;
+        int i = 1;
+        while (i <= sayi)
+        {
+            factorial *= i;
+            i++;
+        }
+        Debug.Log(sayi + "! =" + factorial); */
+
+        //diziler->birden fazla ayný türde veri olmasý durumu
+
+        string[] isimler = new string[12];
+        isimler[0] = "sudem";
+        isimler[1] = "kübra";
+        isimler[2] = "beyza";
+        isimler[3] = "melis";
+        isimler[4] = "selin";
+
+        Debug.Log(isimler[5]);
+        for(int i = 0; i <= isimler.Length - 1; i++)
+        {
+            Debug.Log(isimler[i]);
+        }
+        //diziden rastgele bir eleman seçelim
+        string[] names = { "Ali", "veli", "hasan", "hüseyin" };
+        int randomIndex =UnityEngine.Random.Range(0, names.Length);
+
+        string randomName = names[randomIndex];
+
+        Debug.Log(randomName);
+        
+        int[] sayilar = { 10, 20, 30, 40, 50 };
+
+        for (int i = 0; i < sayilar.Length; i++)
+        {
+
+            Debug.Log(sayilar[i]);
+        }
+        List<string> list = new List<string>();
+        list.Add("hira");
+        list.Add("elif");
+        list.Add("sudem");
+        list.Add("kübra");
+
+        foreach (string s in list)
+        {
+            Debug.Log(s);
+        }
+        list.Remove("hira");
+
+        foreach (string m in list)
+        {
+            print(m);
+
+        }
+        list.Insert(0, "neslihan");
+        foreach (string n in list)
+        {
+            print(n);
+
+        }
+        if (list.Contains("neslihan"))
+        {
+            Debug.Log("Ali Bulundu");
+        }
+        else
+        {
+            Debug.Log("Ali Bulunamadý");
+        }
+
+        list.Clear();//listeyi temizledik.
+        foreach (string k in list)
+        {
+            Debug.Log(k);
+        }
+
 
 
     }
