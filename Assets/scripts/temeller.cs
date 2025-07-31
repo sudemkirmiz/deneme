@@ -20,6 +20,8 @@ public class temeller : MonoBehaviour
 
     [SerializeField] public double urun1;
     [SerializeField] public double urun2;
+
+    [SerializeField] public int secim;
     private void Start()
     {
         //Giriþ
@@ -160,6 +162,7 @@ public class temeller : MonoBehaviour
          }*/
 
         //kullanýcýdan 2 sýnav ve bir performans notu girmesi Girilen 3 notun ortalamasý 50 ve daha büyükse “Baþarýlý”; deðilse “Baþarýsýz” çýktýlarý veren kodu yazýnýz.
+        /*
         int deger=(sýnavnot1+sýnavnot2+perfnot)/3;
         if (deger >= 50)
         {
@@ -204,6 +207,40 @@ public class temeller : MonoBehaviour
             double indirim = (toplam * 25)/ 100;
             double toplamtutar = toplam - indirim;
             Debug.Log("Ödenecek miktar, indirimden sonra" + toplamtutar + "TL’dir.");
+        } */
+
+        //switch-case
+        //girilen iki sayýyý 4 iþlemi yaptýralým
+        switch (secim)
+        {
+            case 1:
+                Debug.Log("pzt");
+                break;
+            case 2:
+                Debug.Log("salý");
+                break;
+            case 3:
+                Debug.Log("çarþ");
+                break;
+            case 4:
+                Debug.Log("perþ");
+                break;
+            case 5:
+                Debug.Log("cum");
+                break;
+            case 6:
+                Debug.Log("cmt");
+                break;
+            case 7:
+                Debug.Log("pazar");
+                break;
+            default:
+                Debug.Log("gün yok");
+                break;
+
+
+
+
         }
 
 
