@@ -1,10 +1,29 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class temeller : MonoBehaviour
 {
+    //hem parametre alan hem deðer döndüren
+    int topla(int n, int m)
+    {
+        return n + m;
+    }
+    int cikar(int n, int m)
+    {
+        return n - m;
+    }
+    int carp(int n, int m)
+    {
+        return n * m;
+    }
+    int böl(int n, int m)
+    {
+        return n / m;
+    }
+
     /*[SerializeField] public int puan;
     public bool isDeath;
     [SerializeField] public int say1;
@@ -363,6 +382,43 @@ public class temeller : MonoBehaviour
         {
             Debug.Log(k);
         }
+        //metotlar fonksiyonlar
+        //parametre alan deðer döndürmeyen fonksiyon kullanarak 4 iþlemi gerçekleþtiren fonks yazýnýz
+        /*void topla(int n,int m)
+        {
+            int sayi = n + m;
+            Debug.Log(sayi);
+        }
+        void cikar(int n, int m)
+        {
+            int sayi = n - m;
+            Debug.Log(sayi);
+        }
+        void carp(int n, int m)
+        {
+            int sayi = n * m;
+            Debug.Log(sayi);
+        }
+        void böl(int n, int m)
+        {
+            int sayi = n / m;
+            Debug.Log(sayi);
+        }
+        int sayi1 = 20;
+        int sayi2 = 40;
+        topla(sayi1, sayi2);
+        cikar(sayi1, sayi2);
+        carp(sayi1, sayi2);
+        böl(sayi1, sayi2); */
+
+        int sayi1 = topla(7,8);
+        Debug.Log(sayi1);
+        int sayi2 = cikar(17, 2);
+        Debug.Log(sayi2);
+        int sayi3 = carp(12, 4);
+        Debug.Log(sayi3);
+        int sayi4 = böl(40, 8);
+        Debug.Log(sayi4);
 
 
 
@@ -370,6 +426,7 @@ public class temeller : MonoBehaviour
     private void Update()
     {
         // Debug.Log("Puan : " + puan);// konsola mesaj verdiriyoruz.
+
 
 
     }
