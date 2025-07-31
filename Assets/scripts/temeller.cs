@@ -3,11 +3,23 @@ using UnityEngine;
 
 public class temeller : MonoBehaviour
 {
-    [SerializeField] public int puan;
+    /*[SerializeField] public int puan;
     public bool isDeath;
     [SerializeField] public int say1;
     [SerializeField] public int say2;
-    [SerializeField] public int girilensayi;
+    [SerializeField] public int girilensayi; */
+    [SerializeField] public int sýnavnot1;
+    [SerializeField] public int sýnavnot2;
+    [SerializeField] public int perfnot;
+
+    [SerializeField] public int aci1;
+    [SerializeField] public int aci2;
+    [SerializeField] public int aci3;
+
+    [SerializeField] public int bagajhakki;
+
+    [SerializeField] public double urun1;
+    [SerializeField] public double urun2;
     private void Start()
     {
         //Giriþ
@@ -137,15 +149,63 @@ public class temeller : MonoBehaviour
         } */
 
 
-        if(girilensayi > 0)
-        {
-            Debug.Log("sayi pozitiftir");
+        /* if(girilensayi > 0)
+         {
+             Debug.Log("sayi pozitiftir");
 
+         }
+         else
+         {
+             Debug.Log("sayi negatif veya sýfýr");
+         }*/
+
+        //kullanýcýdan 2 sýnav ve bir performans notu girmesi Girilen 3 notun ortalamasý 50 ve daha büyükse “Baþarýlý”; deðilse “Baþarýsýz” çýktýlarý veren kodu yazýnýz.
+        int deger=(sýnavnot1+sýnavnot2+perfnot)/3;
+        if (deger >= 50)
+        {
+            Debug.Log("baþarýlý");
         }
         else
         {
-            Debug.Log("sayi negatif veya sýfýr");
+            Debug.Log("baþarýsýz");
         }
+
+        //üçgen iç açý sorusu
+        int acilartop = aci1 + aci2 + aci3;
+        if(acilartop == 180)
+        {
+            Debug.Log("bu bir üçgendir");
+        }
+        else
+        {
+            Debug.Log("üçgen deðil");
+        }
+
+        //havaalaný
+        if (bagajhakki <= 20)
+        {
+            Debug.Log("herhangi bir ücret ödenmez");
+
+        }
+        else {
+            int fazlalik = bagajhakki - 20;
+            Debug.Log("Fazla bagaj için"+ fazlalik*10 +"TL ödemelisiniz.");
+            
+        }
+
+        //ödeme miktarý
+        double toplam = urun1 + urun2;
+        if(toplam <= 200)
+        {
+            Debug.Log("ödenecek miktar" + toplam);
+        }
+        else
+        {
+            double indirim = (toplam * 25)/ 100;
+            double toplamtutar = toplam - indirim;
+            Debug.Log("Ödenecek miktar, indirimden sonra" + toplamtutar + "TL’dir.");
+        }
+
 
 
     }
